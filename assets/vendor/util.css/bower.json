@@ -1,0 +1,23 @@
+{
+  "name": "util.css",
+  "version": "0.1.6",
+  "homepage": "https://github.com/bastengao/common.css",
+  "authors": [
+    "bastengao <bastengao@gmail.com>"
+  ],
+  "description": "Common style collection",
+  "main": [ "util.scss" ],
+  "keywords": [
+    "common",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "gulpfile.js",
+    "test",
+    "tests"
+  ]
+}

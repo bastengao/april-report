@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{page.title}}({{page.student}})</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/vendor/fullpage.js/jquery.fullPage.css">
+  <link rel="stylesheet" href="/assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/assets/vendor/util.css/dist/util.min.css">
+  <style>
+    .section {
+      text-align: center;
+      background-image: url(/assets/images/dyxw_bj.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+      color: white;
+    }
+
+    .section .info {
+      color: yellow;
+    }
+
+    .fp-section .animated {
+      animation-name: none;
+    }
+
+    .fp-section.active .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .fp-section.active .flipInX {
+      animation-delay: 0.5s;
+      animation-name: flipInX;
+    }
+
+    .fp-viewing-0 .logo {
+      padding: 50px 20px;
+      box-sizing: border-box;
+    }
+
+    .fp-viewing-0 h2,
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    .profile-img-student {
+      max-height: 40%;
+      margin: 0 auto;
+    }
+
+    .profile-img {
+      max-height: 75%;
+      margin: 0 auto;
+    }
+
+    .img-baloon {
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    .img-teacher-said {
+      margin: 0 auto;
+      max-height: 50%;
+    }
+
+    .info-list-border {
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid blue;
+      text-align: left;
+    }
+
+    .info-list {
+      text-align: left;
+      padding: 0;
+      margin: 10px auto;
+    }
+
+
+    .ideal h4, .ideal h5 {
+      line-height: 2em;
+    }
+
+
+    .section.words_to_parents .fp-tableCell {
+      padding: 10px;
+    }
+
+    .words_to_parents {
+      text-align: left;
+    }
+    .words_to_parents .info {
+      text-align: center;
+    }
+    .words_to_parents p {
+      text-indent: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 页面资源目录 -->
+  {% assign page_assets_dir = page.id | replace_first:'/':'' | replace:'/':'-' %}
+
+
+  <div id="fullpage">
+    <div class="section">
+      <img class="img-responsive logo" src="/assets/images/dyxw_logo.png" alt="">
+      <h2 class="">{{page.student_name}} 成长报告</h2>
+      <h3 class="">{{page.student}}'s Growth Report</h3>
+      <h4 class="">{{page.class}}</h4>
+      <h4 class="">开课时间：{{page.duration}}</h4>
+    </div>
+
+    <div class="section">
+      <img class="img-responsive profile-img-student" src="/assets/images/{{page_assets_dir}}/student.jpg" alt="">
+      <div class="info-list-border">
+        <h4 class="info">学生信息[Student information]</h4>
+        <h4 class="info-list">
+          <span class="info">姓名：</span>{{page.student_name}}</h4>
+        <h4 class="info-list">
+          <span class="info">英文名：</span>{{page.student}}</h4>
+        <h4 class="info-list">
+          <span class="info">性别：</span>{{page.gender}}</h4>
+        <h4 class="info-list">
+          <span class="info">民族：</span>{{page.racial}}</h4>
+        <h4 class="info-list">
+          <span class="info">性格：</span>{{page.feature}}</h4>
+        <h4 class="info-list">
+          <span class="info">出生年月：</span>{{page.birthday}}</h4>
+        <h4 class="info-list">
+          <span class="info">入学时间：</span>{{page.startAt}}</h4>
+        <h4 class="info-list">
+          <span class="info">就读学校：</span>{{page.school}}</h4>
+      </div>
+    </div>
+
+    <div class="section start">
+      <h4 class="info">起点[Start]</h4>
+      {% for ability in page.abilities %}
+      <h4 class="info-list">
+        <span class="info">{{ability.name}}：</span>{{ability.content}}
+      </h4>
+      {% endfor %}
+    </div>
+
+    <div class="section teacher">
+      <img class="img-responsive profile-img" src="/assets/images/{{page_assets_dir}}/teacher.jpg" alt="">
+      <h4 class="info">我的老师[My teacher]</h4>
+      <h4>{{page.teacher_name}} {{page.teacher}}</h4>
+    </div>
+
+    <div class="section ideal">
+      <img class="img-responsive img-baloon" src="/assets/images/baloon.png" alt="">
+      <h4 class="info m-v-10">教学理念[Teaching ideal]</h4>
+      <h5>点点滴滴学英语，相信没有教不会的孩子。</h5>
+      <h4 class="info m-t-50 m-b-10">教学擅长[Great teaching skills]</h4>
+      <h5>情景式教学，输入与输出相辅相成。因材施教，每个宝贝都是最棒的，善于发现每个孩子的闪光点。</h5>
+    </div>
+
+    {% for memory in page.memories %}
+    <div class="section moment">
+      <img class="img-responsive img-teacher-said" src="/assets/images/{{page_assets_dir}}/memory_{{forloop.index}}.jpg" alt="">
+      <h4 class="info">美时美刻[Good time]</h4>
+      <p>{{memory}}</p>
+    </div>
+    {% endfor %}
+
+    <div class="section teacher-say">
+      <img class="img-responsive img-teacher-said" src="/assets/images/{{page_assets_dir}}/teacher_said.jpg" alt="">
+      <h4 class="info">老师说[Good time]</h4>
+      <p>{{page.teacher_said}}</p>
+    </div>
+
+    <div class="section month-1">
+      <img class="img-responsive img-teacher-said" src="/assets/images/{{page_assets_dir}}/month_1.jpg" alt="">
+      <h4 class="info">第一个月[First month]</h4>
+      <p>{{page.first_month}}</p>
+    </div>
+
+    <div class="section month-2">
+      <img class="img-responsive img-teacher-said" src="/assets/images/{{page_assets_dir}}/month_2.jpg" alt="">
+      <h4 class="info">第二个月[Second month]</h4>
+      <p>{{page.second_month}}</p>
+    </div>
+
+    <div class="section words_to_parents">
+      <h4 class="info">Words to parents</h4>
+      <p style="text-indent: 0;">亲爱的爸爸妈妈：</p>
+      {% assign paragraphes = page.words_to_parents | split:' ' %}
+      {% for paragraph in paragraphes %}
+        <p>{{paragraph}}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <script src="/assets/vendor/jquery/dist/jquery.js"></script>
+  <script src="/assets/vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
+  <script src="/assets/vendor/fullpage.js/vendors/jquery.slimscroll.js"></script>
+  <script src="/assets/vendor/fullpage.js/jquery.fullPage.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        navigation: true,
+      });
+    });
+  </script>
+</body>
+
+</html>

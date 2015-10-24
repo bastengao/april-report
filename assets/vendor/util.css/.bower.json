@@ -1,0 +1,35 @@
+{
+  "name": "util.css",
+  "version": "0.1.6",
+  "homepage": "https://github.com/bastengao/common.css",
+  "authors": [
+    "bastengao <bastengao@gmail.com>"
+  ],
+  "description": "Common style collection",
+  "main": [
+    "util.scss"
+  ],
+  "keywords": [
+    "common",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "gulpfile.js",
+    "test",
+    "tests"
+  ],
+  "_release": "0.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.6",
+    "commit": "511c088c8d1bf4a1644be5a085dcbdc3e3b39717"
+  },
+  "_source": "git://github.com/bastengao/util.css.git",
+  "_target": "~0.1.6",
+  "_originalSource": "util.css",
+  "_direct": true
+}
