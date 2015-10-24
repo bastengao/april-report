@@ -120,6 +120,39 @@
   }
 }
 
+.fp-section p {
+  padding: 5px;
+  line-height: 2em;
+}
+
+.fp-section .half {
+  height: 50%;
+}
+
+.fp-section .h-3 {
+  height: 30%;
+}
+
+.fp-section .h-4 {
+  height: 40%;
+}
+
+.fp-section .h-5 {
+  height: 50%;
+}
+
+.fp-section .h-6 {
+  height: 60%;
+}
+
+.fp-section .h-7 {
+  height: 70%;
+}
+
+.fp-section .h-8 {
+  height: 80%;
+}
+
 .fp-section .logo {
   padding: 50px 20px;
   box-sizing: border-box;
@@ -132,8 +165,12 @@ h3 {
   margin-bottom: 50px;
 }
 
+.fp-section.profile .fp-tableCell {
+  vertical-align: top;
+}
+
 .profile-img-student {
-  max-height: 40%;
+  max-height: 100%;
   margin: 0 auto;
 }
 
@@ -147,15 +184,24 @@ h3 {
   width: 200px;
 }
 
+.img-teacher {
+  margin: 0 auto;
+  max-height: 100%;
+}
+
 .img-teacher-said {
   margin: 0 auto;
-  max-height: 50%;
+  max-height: 100%;
+}
+
+.img-memory {
+  margin: 0 auto;
+  max-height: 100%;
 }
 
 .info-list-border {
-  padding: 10px;
   margin: 10px;
-  border: 2px solid blue;
+  padding: 0 10px;
   text-align: left;
 }
 
@@ -168,6 +214,10 @@ h3 {
 
 .ideal h4, .ideal h5 {
   line-height: 2em;
+}
+
+.section.teacher-say .fp-tableCell {
+  vertical-align: top;
 }
 
 

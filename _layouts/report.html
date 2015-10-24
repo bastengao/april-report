@@ -25,8 +25,11 @@
       <h4 class="">开课时间：{{page.duration}}</h4>
     </div>
 
-    <div class="section">
-      <img class="img-responsive profile-img-student animated bounceInRight" src="/assets/images/{{page_assets_dir}}/student.jpg" alt="">
+    <div class="section profile">
+      <div class="h-3">
+        <img class="img-responsive profile-img-student animated bounceInRight" src="/assets/images/{{page_assets_dir}}/student.jpg" alt="">
+      </div>
+
       <div class="info-list-border animated bounceInRight delay-1">
         <h4 class="info">学生信息[Student information]</h4>
         <h4 class="info-list">
@@ -60,7 +63,9 @@
     </div>
 
     <div class="section teacher">
-      <img class="img-responsive profile-img animated fadeInLeft" src="/assets/images/{{page_assets_dir}}/teacher.jpg" alt="">
+      <div class="h-8">
+        <img class="img-responsive img-teacher animated fadeInLeft" src="/assets/images/{{page_assets_dir}}/teacher.jpg" alt="">
+      </div>
       <div class="animated slideInUp">
         <h4 class="info">我的老师[My teacher]</h4>
         <h4>{{page.teacher_name}} {{page.teacher}}</h4>
@@ -81,19 +86,25 @@
 
     {% for memory in page.memories %}
     <div class="section moment">
-      <img class="img-responsive img-teacher-said animated fadeInRight" src="/assets/images/{{page_assets_dir}}/memory_{{forloop.index}}.jpg" alt="">
+      <div class="half">
+        <img class="img-responsive img-memory animated fadeInRight" src="/assets/images/{{page_assets_dir}}/memory_{{forloop.index}}.jpg" alt="">
+      </div>
       <h4 class="info animated lightSpeedIn delay-1">美时美刻[Good time]</h4>
       <p class="animated rollIn delay-15">{{memory}}</p>
     </div>
     {% endfor %}
 
     <div class="section teacher-say">
-      <img class="img-responsive img-teacher-said animated zoomIn" src="/assets/images/{{page_assets_dir}}/teacher_said.jpg" alt="">
+      <div class="h-5">
+        <img class="img-responsive img-teacher-said animated zoomIn" src="/assets/images/{{page_assets_dir}}/teacher_said.jpg" alt="">
+      </div>
       <p class="animated slideInLeft delay-1">{{page.teacher_said}}</p>
     </div>
 
     <div class="section month-1">
-      <img class="img-responsive img-teacher-said animated fadeInDown" src="/assets/images/{{page_assets_dir}}/month_1.jpg" alt="">
+      <div class="h-5">
+        <img class="img-responsive img-teacher-said animated fadeInDown" src="/assets/images/{{page_assets_dir}}/month_1.jpg" alt="">
+      </div>
       <div class="animated fadeInUp delay-1">
         <h4 class="info">第一个月[First month]</h4>
         <p>{{page.first_month}}</p>
@@ -101,7 +112,9 @@
     </div>
 
     <div class="section month-2">
-      <img class="img-responsive img-teacher-said animated fadeInDown" src="/assets/images/{{page_assets_dir}}/month_2.jpg" alt="">
+      <div class="h-5">
+        <img class="img-responsive img-teacher-said animated fadeInDown" src="/assets/images/{{page_assets_dir}}/month_2.jpg" alt="">
+      </div>
       <div class="animated fadeInUp delay-1">
         <h4 class="info">第二个月[Second month]</h4>
         <p>{{page.second_month}}</p>
@@ -128,7 +141,8 @@
   <script>
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        navigation: true,
+        // 导航
+        navigation: false,
       });
     });
   </script>
