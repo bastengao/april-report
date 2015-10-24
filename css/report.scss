@@ -1,0 +1,187 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+.section {
+  text-align: center;
+  background-image: url(/assets/images/dyxw_bj.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  color: white;
+
+  .info {
+    color: yellow;
+  }
+}
+
+.fp-section .animated {
+  animation-name: none;
+}
+
+.fp-section.active {
+  .animated  {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .flipInX {
+    animation-delay: 0.5s;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+  }
+
+  .bounceInRight {
+    animation-delay: 0.5s;
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+  }
+
+  .bounceInUp {
+    animation-delay: 0.5s;
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+  }
+
+  .bounceInDown {
+    animation-delay: 0.5s;
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+  }
+
+  .fadeInLeft {
+    animation-delay: 0.5s;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+
+  .fadeInRight {
+    animation-delay: 0.5s;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+
+  .fadeInDown {
+    animation-delay: 0.5s;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+
+  .fadeInUp {
+    animation-delay: 0.5s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+  .slideInUp {
+    animation-delay: 0.5s;
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+  }
+
+  .slideInDown {
+    animation-delay: 0.5s;
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+  }
+
+  .slideInLeft {
+    animation-delay: 0.5s;
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+  }
+
+  .lightSpeedIn {
+    animation-delay: 0.5s;
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+  }
+
+  .rollIn {
+    animation-delay: 0.5s;
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
+  }
+
+  .zoomIn {
+    animation-delay: 0.5s;
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+  }
+
+  .delay-1 {
+    animation-delay: 1s;
+  }
+
+  .delay-15 {
+    animation-delay: 1.5s;
+  }
+}
+
+.fp-viewing-0 .logo {
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.fp-viewing-0 h2,
+h3 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.profile-img-student {
+  max-height: 40%;
+  margin: 0 auto;
+}
+
+.profile-img {
+  max-height: 75%;
+  margin: 0 auto;
+}
+
+.img-baloon {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.img-teacher-said {
+  margin: 0 auto;
+  max-height: 50%;
+}
+
+.info-list-border {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid blue;
+  text-align: left;
+}
+
+.info-list {
+  text-align: left;
+  padding: 0;
+  margin: 10px auto;
+}
+
+
+.ideal h4, .ideal h5 {
+  line-height: 2em;
+}
+
+
+.section.words_to_parents {
+  text-align: left;
+
+  .fp-tableCell {
+    padding: 10px;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  p {
+    text-indent: 2em;
+  }
+}
