@@ -1,0 +1,41 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+.section {
+  text-align: center;
+  background-image: url(/assets/images/wedding/bg2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  color: white;
+
+  .red {
+    color: #ff3333;
+  }
+
+
+  &.first {
+    .fp-tableCell {
+      text-align: center;
+      vertical-align: top;
+    }
+  }
+
+  &.second {
+    .fp-tableCell {
+      text-align: center;
+      vertical-align: top;
+    }
+  }
+
+  &.gallery {
+    .img-responsive {
+      max-width: 110%;
+    }
+  }
+
+
+  .img-center {
+    margin: 0 auto;
+  }
+}
