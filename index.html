@@ -6,14 +6,11 @@ layout: default
 
   <h1 class="page-heading">Reports</h1>
 
-  <ul class="post-list">
+  <ul>
     {% for post in site.posts %}
-      <li>
+      <li class="m-v-10">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{post.date | date:"%F"}} {{ post.class }} _ {{post.student}}({{post.student_name}})</a>
-        </h2>
+        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{post.date | date:"%F"}} {{ post.class }} _ {{post.student}}({{post.student_name}})</a>
       </li>
     {% endfor %}
   </ul>

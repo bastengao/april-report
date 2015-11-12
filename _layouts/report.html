@@ -23,6 +23,7 @@
       <h3 class="">{{page.student}}'s Growth Report</h3>
       <h4 class="">{{page.class}}</h4>
       <h4 class="">开课时间：{{page.duration}}</h4>
+      <div id="qrcode" class="visible-md visible-lg" style="width: 100px; height: 100px;"></div>
     </div>
 
     <div class="section profile">
@@ -42,12 +43,20 @@
           <span class="info">民族：</span>{{page.racial}}</h4>
         <h4 class="info-list">
           <span class="info">性格：</span>{{page.feature}}</h4>
-        <h4 class="info-list">
-          <span class="info">出生年月：</span>{{page.birthday}}</h4>
+        {% if page.birthday %}
+          <h4 class="info-list">
+            <span class="info">出生年月：</span>{{page.birthday}}</h4>
+        {% endif %}
+
+        {% if page.startAt %}
         <h4 class="info-list">
           <span class="info">入学时间：</span>{{page.startAt}}</h4>
+        {% endif %}
+
+        {% if page.school %}
         <h4 class="info-list">
           <span class="info">就读学校：</span>{{page.school}}</h4>
+        {% endif %}
       </div>
     </div>
 
@@ -135,6 +144,7 @@
 
 
   <script src="/assets/vendor/jquery/dist/jquery.js"></script>
+  <script src="/assets/vendor/jquery-qrcode/jquery.qrcode.min.js">
   <script src="/assets/vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
   <script src="/assets/vendor/fullpage.js/vendors/jquery.slimscroll.js"></script>
   <script src="/assets/vendor/fullpage.js/jquery.fullPage.js"></script>
@@ -144,6 +154,12 @@
         // 导航
         navigation: false,
       });
+
+      $('#qrcode').qrcode({
+        width: 200,
+        height: 200,
+    		text: "{{page.url | prepend: site.url}}"
+    	});
     });
   </script>
 </body>
